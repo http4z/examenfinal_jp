@@ -1,38 +1,271 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
+}
+
+/* Contenedor principal */
+.App {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+/* Títulos */
+h1 {
+  font-size: 2.5rem;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2, h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  color: #555;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Contenedor de secciones */
+.section-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+/* Formularios */
+form {
+  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #f7f9fc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  gap: 15px; /* Añadir espacio entre los campos */
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+
+form input, form select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+/* Botones */
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  margin-top: 10px;
+}
+
+button[type="button"] {
+  background-color: #6c757d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  opacity: 0.9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Botones de editar y eliminar */
+li button {
+  margin-left: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+}
+
+button.edit-button {
+  background-color: #ffc107;
+  color: white;
+}
+
+button.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.edit-button:hover {
+  background-color: #e0a800;
+}
+
+button.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Lista de proyectos */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+li span {
+  font-size: 1.1rem;
+  flex: 1;
+  color: #333;
+}
+
+/* Sección de pago */
+.payment-section {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Mensaje de éxito de pago */
+.payment-success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #c3e6cb;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* Estilos para el botón de pago */
+.payment-section button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.payment-section button:hover {
+  background-color: #218838;
+}
+
+/* Estilos para el campo de tarjeta */
+.CardElement {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: white;
+}
+
+/* Mensaje de éxito de pago */
+.payment-success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #c3e6cb;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* Mensaje de error de pago */
+.payment-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #f5c6cb;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* App.css */
+
+.payment-section {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px; /* Ajusta según el diseño */
+}
+
+.payment-field {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.payment-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.CardElement {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: white;
 }
